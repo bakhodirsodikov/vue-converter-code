@@ -1,0 +1,181 @@
+@import "./bootstrap/_bootstrap";
+@import "/node_modules/bootstrap-icons/font/bootstrap-icons.min.css";
+@import "./variables.scss";
+
+@mixin row-cols($count) {
+  > * {
+    flex: 0 0 auto;
+    width: divide(1, $count);
+  }
+}
+
+*{
+  &:focus{
+    border: none
+  }
+}
+
+html, body{
+  height: 100%;
+  background: $background-gradient;
+  font-size: 18px;
+}
+
+
+.cont{
+  min-height: 100%;
+}
+
+.title-cont{
+  position: relative;
+  overflow: hidden;
+  height: 40px;
+}
+
+.title-box{
+  margin-top: -10px;
+  animation-name: up ;
+  animation-duration: 9s;
+  animation-delay: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.title{
+  font-size: 35px;
+  margin: 0;
+  line-height: 1;
+  margin-top: 10px;
+  color: $text-color;
+}
+
+@keyframes up {
+  20% {
+    transform: translatey(-45px);
+  }
+  40% {
+    transform: translatey(-90px);
+  }
+  60% {
+    transform: translatey(-135px);
+  }
+  80% {
+    transform: translatey(-180px);
+  }
+  100% {
+    transform: translatey(-225px);
+  }
+}
+
+.welcome-btn{
+  padding: 0;
+  height: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: $text-color;
+  animation-name: appearance;
+  animation-delay: 11s;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  opacity: 0;
+  pointer-events: none;
+
+
+  &:hover{
+    color: $link-color;
+    transition: 0.5s;
+  }
+  &:disabled{
+    color: $text-color;
+  }
+}
+
+@keyframes appearance{
+  25%{
+    opacity: 0.25;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  75%{
+    opacity: 0.75;
+  }
+  100%{
+    opacity: 1;
+    pointer-events:auto;
+  }
+
+}
+
+.main__arrow-arrows{
+  background-color: $text-color;
+  min-width: 35px;
+  height: 35px;
+  border: none;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__arrow-line{
+  width: 100%;
+  height: 1px;
+  background-color: $text-color;
+
+}
+
+.bi-chevron-down, .bi-chevron-up{
+  color: $arrow-color;
+  font-size: 15px;
+  font-weight: 700;
+  margin: -5px 0 -5px 0;
+}
+
+.main__amount, .main__currency{
+  width: 45%;
+}
+
+
+
+.dropdown1{
+  width: 100%;
+  button, ul{
+    background-color: transparent;
+    width: 100%;
+    
+  }
+
+  ul{
+    max-height: 250px;
+    background-color: $text-color;
+    overflow-y: scroll;
+  }
+  
+}
+
+.main__amount-input{
+  background-color: transparent;
+  color: $text-color;
+  border: 1px solid $text-color;
+  text-align: right;
+  height: 100%;
+  font-size: 1.2rem;
+
+
+  &:focus{
+    outline: 0;
+  }
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+
+      -webkit-appearance: none;
+      margin: 0; 
+  }
+}
+
+.pointer-event-none{
+  pointer-events: none;
+}

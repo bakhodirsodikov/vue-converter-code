@@ -1,0 +1,23 @@
+{
+  "name": "vue-converter",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 8080",
+    "build": "vite build",
+    "preview": "vite preview",
+    "scss": "sass src/styles/style.scss src/styles/style.css"
+  },
+  "dependencies": {
+    "animejs": "^3.2.2",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "sass": "^1.74.1",
+    "vite": "^5.1.6"
+  }
+}
